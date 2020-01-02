@@ -5,7 +5,7 @@ module.exports = {
             {
                 modules: "commonjs",
                 useBuiltIns: "usage",
-                coreks: 3
+                corejs: 3
             }
         ],
         '@babel/react'

@@ -70,6 +70,12 @@ module.exports={
         {
             name:"简介",
             content:"docs/introduction.md"
+        },
+        {
+            name:"基础组件",
+            components:"src/components/**/[A-Z]*.jsx",
+            exampleMode:"collapse",
+            usageMode:"expand"
         }
     ]
 }
