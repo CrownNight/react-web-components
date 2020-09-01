@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "antd": "^3.26.18",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1" 
   },
@@ -28,7 +29,6 @@
     "file-loader": "^6.0.0",
     "less": "^3.12.2",
     "less-loader": "^7.0.0",
-    "prop-types": "^15.7.2",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
     "react-styleguidist": "^11.0.8"
@@ -37,7 +37,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "styleguidist server",
     "clean": "rm -rf ./lib && mkdir lib",
-    "lib": "npm run clean && babel src --out-dir lib"
+    "build": "npm run clean && babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
