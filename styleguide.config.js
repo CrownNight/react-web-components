@@ -1,81 +1,23 @@
 const path = require("path");
 
-module.exports={
-    components:"src/components/**/[A-Z]*.jsx",
-    title:"reactUI组件库",
-    template:{},
-    moduleAliases:{
-        "rsg-example":path.resolve(__dirname,"src")
+module.exports = {
+    components: "src/components/**/[A-Z]*.js",
+    title: "基于antd的react ui组件库",
+    template: {},
+    moduleAliases: {
+        "rsg-example": path.resolve(__dirname, "src")
     },
-    webpackConfig:{
-        module:{
-            rules:[
-                {
-                    test:/\.jsx?$/,
-                    exclude:/node_modules/,
-                    loader:"babel-loader"
-                },
-                {
-                    test:/\.css$/,
-                    exclude:/node_modules/,
-                    loader:"style-loader!css-loader?modules"
-                },
-                {
-                    test:/\.less$/,
-                    exclude:/node_modules/,
-                    use:[
-                        "style-loader",
-                        "css-loader",
-                        {
-                            loader:"less-loader",
-                            options:{
-                                javascriptEnabled:true
-                            }
-                        }
-                    ]
-                },
-                {
-                    //antd样式处理
-                    test:/\.(le|c)ss$/,
-                    exclude:/src/,
-                    use:[
-                        {loader:"style-loader"},
-                        {
-                            loader:"css-loader",
-                            options:{
-                                importLoaders:1
-                            }
-                        },
-                        {
-                            loader:"less-loader",
-                            options:{
-                                javascriptEnabled:true
-                            }
-                        }
-                    ]
-                },
-                {
-                    test:/\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                    use:"url-loader?limit=10000&mimetype=application/font-woff"
-                },
-                {
-                    //字体处理
-                    test:/\.(ttf|ext|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                    use:"file-loader"
-                }
-            ]
-        }
-    },
-    sections:[
+    webpackConfig: require('./webpack.config'),
+    sections: [
         {
-            name:"简介",
-            content:"docs/introduction.md"
+            name: "简介",
+            content: "docs/introduction.md"
         },
         {
-            name:"基础组件",
-            components:"src/components/**/[A-Z]*.jsx",
-            exampleMode:"collapse",
-            usageMode:"expand"
+            name: "基础组件",
+            components: "src/components/**/[A-Z]*.js",
+            exampleMode: "collapse",
+            usageMode: "expand"
         }
     ]
 }

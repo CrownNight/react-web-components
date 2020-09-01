@@ -1,48 +1,59 @@
 {
   "name": "react-web-components",
   "version": "1.0.0",
-  "description": "基于react+antd的ui组件库",
+  "description": "基于antd的react组件库",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "styleguidist server"
+    "start": "styleguidist server",
+    "clean": "rm -rf ./lib && mkdir lib",
+    "lib": "npm run clean && babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdWHF/react-web-components.git"
   },
+  "keywords": [
+    "components",
+    "antd"
+  ],
   "author": "weihongfu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cdWHF/react-web-components/issues"
   },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "homepage": "https://github.com/cdWHF/react-web-components#readme",
   "dependencies": {
-    "antd": "^3.26.5",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
+    "@babel/runtime-corejs2": "^7.11.2",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "css-loader": "^4.2.2",
+    "file-loader": "^6.0.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.0",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.7",
-    "@babel/core": "^7.7.7",
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/preset-env": "^7.7.7",
-    "@babel/preset-react": "^7.7.4",
-    "@babel/register": "^7.7.7",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-add-module-exports": "^1.0.2",
-    "babel-plugin-import": "^1.13.0",
-    "core-js": "3",
-    "css-loader": "^3.4.0",
-    "file-loader": "^5.0.2",
-    "less": "^3.10.3",
-    "less-loader": "^5.0.0",
-    "path": "^0.12.7",
-    "react-styleguidist": "^10.3.2",
-    "string": "^3.3.3",
-    "style-loader": "^1.1.2",
-    "url-loader": "^3.0.0",
-    "webpack": "^4.41.5"
+    "antd": "^3.26.18",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-styleguidist": "^11.0.8"
   }
 }
