@@ -1,8 +1,38 @@
 {
-  "name": "react-web-components",
+  "name": "@crown/react-web-components",
   "version": "1.0.0",
-  "description": "基于antd的react组件库",
+  "description": "基于antd的react组件基础库",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "antd": "^3.26.18",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1" 
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
+    "@babel/runtime-corejs2": "^7.11.2",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "css-loader": "^4.2.2",
+    "file-loader": "^6.0.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.0",
+    "prop-types": "^15.7.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "react-styleguidist": "^11.0.8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "styleguidist server",
@@ -17,43 +47,11 @@
     "components",
     "antd"
   ],
-  "author": "weihongfu",
-  "license": "ISC",
+  "author": "crownNight",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cdWHF/react-web-components/issues"
   },
-  "files": [
-    "dist",
-    "lib"
-  ],
-  "homepage": "https://github.com/cdWHF/react-web-components#readme",
-  "dependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.4",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-transform-runtime": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
-    "@babel/runtime": "^7.11.2",
-    "@babel/runtime-corejs2": "^7.11.2",
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-import": "^1.13.0",
-    "css-loader": "^4.2.2",
-    "file-loader": "^6.0.0",
-    "less": "^3.12.2",
-    "less-loader": "^7.0.0",
-    "prop-types": "^15.7.2",
-    "style-loader": "^1.2.1",
-    "url-loader": "^4.1.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
-  },
-  "devDependencies": {
-    "antd": "^3.26.18",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-styleguidist": "^11.0.8"
-  }
+  "files": ["lib"],
+  "homepage": "https://github.com/cdWHF/react-web-components#readme"
 }

@@ -1,16 +1,10 @@
-let path = require('path');
-const outputPath = './dist';
+const path = require('path');
 
 module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.json']
     },
     entry: path.resolve(__dirname, "src/index.js"),
-    output: {
-        filename: "[name].js",
-        path: path.resolve(__dirname, outputPath),
-        publicPath: outputPath
-    },
     module: {
         rules: [
         {
